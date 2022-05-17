@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <meta name="description" content="Aplicación responsiva de Clima Actual y pronóstico para los próximos 3 días.">
+
+    <meta name="theme-color" content="#64ffda">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="manifest" href="./manifest.json">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="fade-in">
+        <h1 class="outscreen">Aplicación de Clima Responsiva</h1>
+        <section class="search">
+            <form id="search__form" class="search__form" role="search">
+                <label for="search__input" class="outscreen">Ingresa una ciudad.</label>
+                <input type="text" id="search__input" class="search__input" role="searchbox" name="search"
+                    autocomplete="off" placeholder="Ingresa una ciudad..." required>
+                <button id="search__btn" class="btn btn-search" title="Submit Location"
+                    aria-label="Ingresa una ciudad para obtener sus condiciones climáticas" disabled>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </section>
+        <nav class="nav__btns" id="nav__btns">
+            <button id="geolocation" class="btn btn-geolocation" title="Obtiene tu ubicación"
+                aria-label="Obtiene las condiciones climáticas actuales de tu ubicación">
+                <i class="fa-solid fa-location-crosshairs"></i>
+            </button>
+            <button id="unit" class="btn btn-unit" title="Alterna las unidades de medida"
+                aria-label="Alterna entre los sistemas de medidas métrico e imperial">
+                <span class="celsius">&#176;C</span>
+                <span class="fahrenheit none">&#176;F</span>
+            </button>
+        </nav>
+        <section id="currentWeather" class="currentWeather fade-in">
+            <div id="currentWeather__data" class="currentWeather__data">
+
+                <h2 class="currentWeather__title"></h2>
+                <div class="currentWeather__hero">
+                    <span class="currentWeather__temp"></span>
+                    <figure class="currentWeather__icon">
+                        <i></i>
+                        <figcaption class="currentWeather__desc"></figcaption>
+                    </figure>
+                </div>
+                <p class="currentWeather__day"></p>
+                <ul class="currentWeather__conditions">
+                    <li class="currentWeather__maxTemp"></li>
+                    <li class="currentWeather__minTemp"></li>
+                    <li class="currentWeather__humidity"></li>
+                </ul>
+                <div class="currentWeather__more"><a href=""></a></div>
+            </div>
+        </section>
+        <section id="nextDaysWeather" class="nextDaysWeather fade-in">
+            <h2 aria-label="Próximos días">próximos días</h2>
+
+            <ul class="nextDaysWeather__list">
+            </ul>
+        </section>
+        <section id="historial" class="historial">
+            <h2 aria-label="Últimas 10 búsquedas">últimas 10 búsquedas</h2>
+            <ul id="historial__list" class="historial__list">
+
+
+            </ul>
+
+        </section>
+        <template class="template-historial">
+            <li class="historial__item">
+                <!-- <a aria-label="Ciudad buscada anteriormente"> -->
+                <p class="historial__name">Name</p>
+                <!-- </a> -->
+                <button class="historial__btn" title="Borra la ciudad buscada"
+                    aria-label="Borra la ciudad buscada anteriormente">
+                    <i class="fa-solid fa-trash"></i>
+                </button>
+            </li>
+        </template>
+        <template class="template-nextDays">
+            <li class="nextDaysWeather__item">
+                <figure class="nextDaysWeather__icon">
+                    <i></i>
+                    <!-- <i class="icon fa-solid"></i> -->
+                </figure>
+                <p class="nextDaysWeather__day">Domingo</p>
+                <div class="nextDaysWeather__temp">
+                    <p class="nextDaysWeather__maxTemp">61°</p>
+                    <p class="nextDaysWeather__minTemp">44°</p>
+                </div>
+            </li>
+        </template>
+        <P class="outscreen" aria-live="assertive"></P>
+    </main>
+</body>
+
+</html>

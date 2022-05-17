@@ -1,0 +1,28 @@
+{
+  "name": "appweatherraft",
+  "version": "1.0.0",
+  "description": "Aplicación responsiva de Clima Actual y pronóstico para los próximos 3 días. Consume una API y muestra los datos.",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "dev": "webpack --mode=development --entry ./src/index.js --output-path ./dist",
+    "build": "webpack --mode=production --entry ./src/index.js --output-path ./dist",
+    "start": "webpack serve --mode development --open"
+  },
+  "keywords": [],
+  "author": "Roberto Antonio Figueira Troisi",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "file-loader": "^6.2.0",
+    "html-loader": "^3.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^28.1.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0",
+    "workbox-webpack-plugin": "^6.5.3"
+  }
+}
