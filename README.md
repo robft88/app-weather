@@ -65,4 +65,4 @@ Para ver la app en línea:
 https://app-weather-raft.netlify.app/
 
 Imagenes:  
-![Image Text](https://firebasestorage.googleapis.com/v0/b/portfolio-raft.appspot.com/o/img.png?alt=media&token=8cfe47ad-b6a9-4052-bc01-09f60db4678c)
+![Image Text](https://firebasestorage.googleapis.com/v0/b/portfolio-raft.appspot.com/o/app-weather.png?alt=media&token=edb786a1-83a1-446b-84cd-d022dbf78efe)
